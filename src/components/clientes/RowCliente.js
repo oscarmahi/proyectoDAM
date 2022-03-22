@@ -1,24 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ClienteContext } from '../../context/clienteContext';
+import { ModalContext } from '../../context/modalContext';
 
 const RowCliente = ({cliente}) => {
+
+    const { setModalTitle, setShowModal } = useContext(ModalContext);
+
+    const { obtenerCliente, eliminarCliente } = useContext(ClienteContext);
     
-    const modificarCliente = () => {
-        console.log("Modificando...");
-    }
-    
-    const eliminarCliente = () => {
-        console.log("Eliminando...");
+    const abrirModalModificarCliente = () => {
+        obtenerCliente(cliente);
+        setModalTitle('Modificar datos de cliente');
+        setShowModal(true);
     }
     
     return (
         <tr>
             <td>
-                <button className="button is-small is-info mr-1" title="Modificar" onClick={ () => modificarCliente()}>
+                <button
+                 className="button is-small is-info mr-1" 
+                 title="Modificar" 
+                 onClick={ () => abrirModalModificarCliente()}>
                     <span className='icon is-small'>
                         <i className="fas fa-edit"></i>
                     </span>
                 </button>
-                <button className="button is-small is-danger" title="Eliminar" onClick={ () => eliminarCliente()}>
+                <button 
+                className="button is-small is-danger" 
+                title="Eliminar" 
+                onClick={ () => eliminarCliente(cliente.idCliente)}>
                     <span className='icon is-small'>
                         <i className="fas fa-trash-alt"></i>
                     </span>

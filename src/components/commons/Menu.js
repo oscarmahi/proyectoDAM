@@ -21,7 +21,7 @@ const Menu = () => {
                         <i className="fas fa-users"></i>
                     </span>
                     <span>
-                        Clientes
+                        Docentes
                     </span>
                 </Link>         
             </div>
@@ -31,7 +31,7 @@ const Menu = () => {
                         <i className="fas fa-city"></i>
                     </span>
                     <span>
-                        Proveedores
+                        Alumnos
                     </span>
                 </Link>         
             </div>            
