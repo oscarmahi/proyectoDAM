@@ -1,29 +1,58 @@
-import React, { useState } from 'react';
-//import { Link, useNavigate } from 'react-router-dom';
+import Axios from 'axios';
+import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../commons/Header';
+import Swal from 'sweetalert2';
+import { SesionContext } from '../../context/sesionContext';
 
 const FormLogin = () => {
 
     const [usuario, setUsuario] = useState('');
     const [password, setPassword] = useState('');
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
+    const { setSesion } = useContext(SesionContext);
 
+    const comprobarAcceso = async () => {
+        //const resultado = await Axios.get('http://localhost:9090/api/clientes');
+        //const resultado = await Axios.get('http://localhost:9090/api/usuarios/byusuariopassword/?usuario=oscarmahi@gmail.com&password=oscar');
+
+        const resultado = await Axios.get(`http://localhost:9090/api/usuarios/byusuariopassword/?usuario=${usuario}&password=${password}`);
+        console.log(resultado);
+        if (resultado.data !== ""){
+            //console.log(resultado.data);
+            //console.log(resultado.data.usuario);
+            //console.log(resultado.data.password);
+            //console.log('usuario:'+usuario);
+            //console.log('password'+password);
+            var r = resultado.data.roles.rol;
+            //console.log(r);
+            if ((resultado.data.usuario === usuario) && (resultado.data.password === password)){
+                console.log('rol que pasa:'+r);
+                setSesion(r);
+                navigate('/inicioa');
+            }
+        }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Login Incorrecto. Inténtelo de nuevo',
+                toast: true
+            });
+            navigate('/');
+        }
+    }
+    
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(`${usuario}, ${password}`);
-        inicio();
-    }
-
-    const inicio = () => {
-        setUsuario('');
-        setPassword('');
-        //navigate('/clientes');
+        //alert(`${usuario}, ${password}`);
+        comprobarAcceso();
     }
 
     return (
         
         <section className="hero is-primary is-fullheight">
             <Header/>
+            <div className="mx-3 is-size-6 has-text-black">PLATAFORMA EDUCATIVA EMPRESARIAL</div>
             <div className="hero-body">
                 <div className="container">
                     <div className="columns is-centered">

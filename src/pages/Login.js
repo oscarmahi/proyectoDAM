@@ -1,11 +1,11 @@
 import React from 'react';
-//import FormLogin from '../components/Login/FormLogin';
+import FormLogin from '../components/Login/FormLogin';
 //import Home from './Home';
 
 const Login = () => {
     return ( 
         <div>
-            {/*<FormLogin/>*/}
+            <FormLogin/>
         </div>
      );
 }

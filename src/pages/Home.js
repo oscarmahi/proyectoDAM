@@ -6,14 +6,19 @@ const Home = () => {
 
     console.log('entra en Home');
 
+/*
+    <Login/>
+    <Layout>
+
+        <p>Home</p>
+    </Layout>
+
+    */
+
+
     return (
         <>
             <Login/>
-            <p>Usuario: OSCAR</p>
-            <Layout>
-
-                <p>Home</p>
-            </Layout>
         </>
     );
 

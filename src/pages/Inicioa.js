@@ -1,13 +1,13 @@
 import React from 'react';
 import Layout from '../components/commons/Layout';
 
-const Proveedores = () => {
-    return (  
+const Inicioa = () => {
+
+    return (         
         <Layout>
-            <p>Proveedores</p>
+           <p>InicioA</p>
         </Layout>
-    
-    );
+     );
 }
  
-export default Proveedores;
+export default Inicioa;

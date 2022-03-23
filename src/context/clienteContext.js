@@ -21,7 +21,7 @@ export const ClienteContextProvider = props => {
 
         try {
             //const resultado = await Axios.get('http://localhost:9090/api/clientes');
-            const resultado = await Axios.get('/clientes');
+            const resultado = await Axios.get('http://localhost:9090/api/clientes');
 
             dispatch({
                 type: OBTENER_CLIENTES,
@@ -45,7 +45,7 @@ export const ClienteContextProvider = props => {
             //     ...cliente,
             //     idCliente: uuidv4()
             // }
-            const resultado = await Axios.post('/clientes', cliente);
+            const resultado = await Axios.post('http://localhost:9090/api/clientes', cliente);
             dispatch({
                 type: REGISTRAR_CLIENTES,
                 //payload: clienteNuevo
@@ -73,7 +73,7 @@ export const ClienteContextProvider = props => {
         try {
             let clienteEncontrado = null;
             if (cliente !== null) {
-                const resultado = await Axios.get(`/clientes/${cliente.idCliente}`);
+                const resultado = await Axios.get(`http://localhost:9090/api/clientes/${cliente.idCliente}`);
                 clienteEncontrado = resultado.data;
             } else {
                 clienteEncontrado = cliente;
@@ -98,7 +98,7 @@ export const ClienteContextProvider = props => {
 
         try {
             //console.log(cliente);
-            const resultado = await Axios.put('/clientes', cliente);
+            const resultado = await Axios.put('http://localhost:9090/api/clientes', cliente);
 
             dispatch({
                 type: MODIFICAR_CLIENTE,
@@ -132,7 +132,7 @@ export const ClienteContextProvider = props => {
                 confirmButtonText: 'Si, eliminar'
             }).then(async (result) => {
                 if (result.value) {
-                    await Axios.delete(`/clientes/${idCliente}`);
+                    await Axios.delete(`http://localhost:9090/api/clientes/${idCliente}`);
                     dispatch({
                         type: ELIMINAR_CLIENTE,
                         payload: idCliente
