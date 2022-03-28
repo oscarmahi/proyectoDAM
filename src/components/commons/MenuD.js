@@ -6,7 +6,7 @@ const MenuD = () => {
         <nav className="panel">
             <p className="panel-heading">Menu Docente</p>
             <div className="panel-block">
-                <Link to="/Inicioa" className="button is-fullwidth">
+                <Link to="/Inicio" className="button is-fullwidth">
                     <span className="icon">
                         <i className="fas fa-home"></i>
                     </span>
@@ -21,7 +21,7 @@ const MenuD = () => {
                         <i className="fas fa-users"></i>
                     </span>
                     <span>
-                        Docentes
+                        Clientes
                     </span>
                 </Link>
             </div>

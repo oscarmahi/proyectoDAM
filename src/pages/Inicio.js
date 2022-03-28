@@ -1,13 +1,13 @@
 import React from 'react';
 import Layout from '../components/commons/Layout';
 
-const Inicioa = () => {
+const Inicio = () => {
 
     return (         
         <Layout>
-           <p>InicioA</p>
+           <p>Inicio</p>
         </Layout>
      );
 }
  
-export default Inicioa;
+export default Inicio;

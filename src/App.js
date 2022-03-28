@@ -5,9 +5,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Clientes from './pages/Clientes';
 import Alumnos from './pages/Alumnos';
-import Axios from 'axios';
-import Inicioa from './pages/Inicioa';
+//import Axios from 'axios';
+import Inicio from './pages/Inicio';
 import { SesionContextProvider } from './context/sesionContext';
+import Centros from './pages/Centros';
+import Cursos from './pages/Cursos';
+import Proyectos from './pages/Proyectos';
 //import Login from './pages/Login';
 
 
@@ -20,21 +23,18 @@ import { SesionContextProvider } from './context/sesionContext';
 
 function App() {
 
-  //const usuario = 'Oscar';
-
-  //      < created && Redirect to = './pages/Home'/>
-
   return (
-
     /*<ModalContextProvider> Esto se pondría aqui si lo fueramos a usar en toda la App*/
     <SesionContextProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/inicioa" element={<Inicioa />} />
+          <Route path="/inicio" element={<Inicio />} />
           <Route path="/clientes" element={<Clientes />} />
+          <Route path="/centros" element={<Centros />} />
           <Route path="/alumnos" element={<Alumnos />} />
-
+          <Route path="/cursos" element={<Cursos />} />
+          <Route path="/proyectos" element={<Proyectos />} />
           {/*<Route path="/login" element={<Login />} />*/}
         </Routes>
       </BrowserRouter>

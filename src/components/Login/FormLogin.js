@@ -17,7 +17,7 @@ const FormLogin = () => {
         //const resultado = await Axios.get('http://localhost:9090/api/usuarios/byusuariopassword/?usuario=oscarmahi@gmail.com&password=oscar');
 
         const resultado = await Axios.get(`http://localhost:9090/api/usuarios/byusuariopassword/?usuario=${usuario}&password=${password}`);
-        console.log(resultado);
+        //console.log(resultado);
         if (resultado.data !== ""){
             //console.log(resultado.data);
             //console.log(resultado.data.usuario);
@@ -27,9 +27,9 @@ const FormLogin = () => {
             var r = resultado.data.roles.rol;
             //console.log(r);
             if ((resultado.data.usuario === usuario) && (resultado.data.password === password)){
-                console.log('rol que pasa:'+r);
+                //console.log('rol que pasa:'+r);
                 setSesion(r);
-                navigate('/inicioa');
+                navigate('/inicio');
             }
         }else{
             Swal.fire({

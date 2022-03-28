@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const MenuE = () => {
     return ( 
         <nav className="panel">
-            <p className="panel-heading">Menu Docente</p>
+            <p className="panel-heading">Menu Empresa</p>
             <div className="panel-block">
-                <Link to="/Inicioa" className="button is-fullwidth">
+                <Link to="/Inicio" className="button is-fullwidth">
                     <span className="icon">
                         <i className="fas fa-home"></i>
                     </span>
