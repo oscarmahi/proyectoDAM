@@ -10,7 +10,12 @@ import Inicio from './pages/Inicio';
 import { SesionContextProvider } from './context/sesionContext';
 import Centros from './pages/Centros';
 import Cursos from './pages/Cursos';
+import CursosC from './pages/CursosC';
 import Proyectos from './pages/Proyectos';
+import ProyectosC from './pages/ProyectosC';
+import Categorias from './pages/Categorias';
+import Tecnologias from './pages/Tecnologias';
+import CentrosC from './pages/CentrosC';
 //import Login from './pages/Login';
 
 
@@ -32,9 +37,14 @@ function App() {
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/clientes" element={<Clientes />} />
           <Route path="/centros" element={<Centros />} />
+          <Route path="/centrosC" element={<CentrosC />} />
           <Route path="/alumnos" element={<Alumnos />} />
           <Route path="/cursos" element={<Cursos />} />
+          <Route path="/cursosC" element={<CursosC />} />
           <Route path="/proyectos" element={<Proyectos />} />
+          <Route path="/proyectosC" element={<ProyectosC />} />
+          <Route path="/categorias" element={<Categorias />} />
+          <Route path="/tecnologias" element={<Tecnologias />} />
           {/*<Route path="/login" element={<Login />} />*/}
         </Routes>
       </BrowserRouter>

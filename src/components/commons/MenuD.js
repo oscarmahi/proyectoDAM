@@ -16,15 +16,56 @@ const MenuD = () => {
                 </Link>
             </div>
             <div className="panel-block">
-                <Link to="/clientes" className="button is-fullwidth">
+                <Link to="/centrosC" className="button is-fullwidth">
                     <span className="icon">
-                        <i className="fas fa-users"></i>
+                        <i className="fas fa-city"></i>
                     </span>
                     <span>
-                        Clientes
+                        Centros Consulta
                     </span>
-                </Link>
-            </div>
+                </Link>         
+            </div>     
+            <div className="panel-block">
+                <Link to="/cursosC" className="button is-fullwidth">
+                    <span className="icon">
+                        <i className="fas fa-city"></i>
+                    </span>
+                    <span>
+                        Cursos Consulta
+                    </span>
+                </Link>         
+            </div>     
+
+            <div className="panel-block">
+                <Link to="/proyectos" className="button is-fullwidth">
+                    <span className="icon">
+                        <i className="fas fa-book"></i>
+                    </span>
+                    <span>
+                        Proyectos
+                    </span>
+                </Link>         
+            </div>       
+            <div className="panel-block">
+                <Link to="/tecnologias" className="button is-fullwidth">
+                    <span className="icon">
+                        <i className="fas fa-book"></i>
+                    </span>
+                    <span>
+                        Tecnologias
+                    </span>
+                </Link>         
+            </div>       
+            <div className="panel-block">
+                <Link to="/categorias" className="button is-fullwidth">
+                    <span className="icon">
+                        <i className="fas fa-plane-departure"></i>
+                    </span>
+                    <span>
+                        Categorias Tecnologicas
+                    </span>
+                </Link>         
+            </div>                   
             <div className="panel-block">
                 <Link to="/alumnos" className="button is-fullwidth">
                     <span className="icon">

@@ -15,16 +15,47 @@ const MenuE = () => {
                     </span>
                 </Link>
             </div>
+
+            <div className="panel-block">
+                <Link to="/centrosC" className="button is-fullwidth">
+                    <span className="icon">
+                        <i className="fas fa-city"></i>
+                    </span>
+                    <span>
+                        Centros Consulta
+                    </span>
+                </Link>         
+            </div>
+            <div className="panel-block">
+                <Link to="/cursosC" className="button is-fullwidth">
+                    <span className="icon">
+                        <i className="fas fa-puzzle-piece"></i>
+                    </span>
+                    <span>
+                        Cursos Consulta
+                    </span>
+                </Link>         
+            </div>            
+            <div className="panel-block">
+                <Link to="/proyectosC" className="button is-fullwidth">
+                    <span className="icon">
+                        <i className="fas fa-book"></i>
+                    </span>
+                    <span>
+                        Proyectos Consulta
+                    </span>
+                </Link>         
+            </div>                     
             <div className="panel-block">
                 <Link to="/alumnos" className="button is-fullwidth">
                     <span className="icon">
                         <i className="fas fa-users"></i>
                     </span>
                     <span>
-                        Alumnos
+                        Alumnos Consulta
                     </span>
                 </Link>
-            </div>            
+            </div>     
             <div className="panel-block">
                 <Link to="/" className="button is-fullwidth">
                     <span className="icon">

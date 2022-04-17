@@ -16,6 +16,7 @@ const FormLogin = () => {
         //const resultado = await Axios.get('http://localhost:9090/api/clientes');
         //const resultado = await Axios.get('http://localhost:9090/api/usuarios/byusuariopassword/?usuario=oscarmahi@gmail.com&password=oscar');
 
+        //Oauth
         const resultado = await Axios.get(`http://localhost:9090/api/usuarios/byusuariopassword/?usuario=${usuario}&password=${password}`);
         //console.log(resultado);
         if (resultado.data !== ""){

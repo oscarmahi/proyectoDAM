@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react';
-import RowProyecto from './RowProyecto';
-import { ProyectoContext } from '../../context/proyectoContext';
+import RowProyectoC from './RowProyectoC';
+import { ProyectoContextC } from '../../context/proyectoContextC';
 
-const TableProyecto = () => {
+const TableProyectoC = () => {
 
-    const { proyectosList, obtenerProyectos } = useContext(ProyectoContext);
+    const { proyectosList, obtenerProyectos } = useContext(ProyectoContextC);
 
     useEffect(() => {
       obtenerProyectos();
@@ -20,7 +20,6 @@ const TableProyecto = () => {
             <table className="table is-hoverable is-fullwidth">
                 <thead>
                     <tr>
-                        <th>Acciones</th>
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Estado</th>
@@ -32,7 +31,7 @@ const TableProyecto = () => {
                 <tbody>
                     {
                         proyectosList.map(proyectoMap => (
-                            <RowProyecto proyecto={proyectoMap} key={proyectoMap.id}/>
+                            <RowProyectoC proyecto={proyectoMap} key={proyectoMap.id}/>
                         ))
                     }
                 </tbody>
@@ -41,4 +40,4 @@ const TableProyecto = () => {
      );
 }
  
-export default TableProyecto;
+export default TableProyectoC;

@@ -11,7 +11,7 @@ const Layout = (props) => {
 
     const { sesion } = useContext(SesionContext);
 
-    if (sesion === 'administrador') {
+    if (sesion === 'Administrador') {
         return (
             /*Esto lo pongo aqui porque lo voy a usar en todas las pantallas del Layout. Se podía haber puesto en App */
             <ModalContextProvider>
@@ -31,7 +31,7 @@ const Layout = (props) => {
                 </div>
             </ModalContextProvider>
         );
-    } else if (sesion === 'docente'){
+    } else if (sesion === 'Docente'){
         return (
             /*Esto lo pongo aqui porque lo voy a usar en todas las pantallas del Layout. Se podía haber puesto en App */
             <ModalContextProvider>
@@ -51,7 +51,7 @@ const Layout = (props) => {
                 </div>
             </ModalContextProvider>
         );
-    } else if (sesion === 'alumno'){
+    } else if (sesion === 'Alumno'){
         return (
             /*Esto lo pongo aqui porque lo voy a usar en todas las pantallas del Layout. Se podía haber puesto en App */
             <ModalContextProvider>
@@ -71,7 +71,7 @@ const Layout = (props) => {
                 </div>
             </ModalContextProvider>
         );
-    } else if (sesion === 'empresa'){
+    } else if (sesion === 'Empresa'){
         return (
             /*Esto lo pongo aqui porque lo voy a usar en todas las pantallas del Layout. Se podía haber puesto en App */
             <ModalContextProvider>

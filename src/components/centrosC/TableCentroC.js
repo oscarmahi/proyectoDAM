@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react';
-import RowCentro from './RowCentro';
-import { CentroContext } from '../../context/centroContext';
+import RowCentroC from './RowCentroC';
+import { CentroContextC } from '../../context/centroContextC';
 
-const TableCentro = () => {
+const TableCentroC = () => {
 
-    const { centrosList, obtenerCentros } = useContext(CentroContext);
+    const { centrosList, obtenerCentros } = useContext(CentroContextC);
 
     useEffect(() => {
       obtenerCentros();
@@ -20,7 +20,6 @@ const TableCentro = () => {
             <table className="table is-hoverable is-fullwidth">
                 <thead>
                     <tr>
-                        <th className="is-size-7">Acciones</th>
                         <th className="is-size-7">Nombre</th>
                         <th className="is-size-7">Direccion</th>
                         <th className="is-size-7">Poblacion</th>
@@ -34,7 +33,7 @@ const TableCentro = () => {
                 <tbody>
                     {
                         centrosList.map(centroMap => (
-                            <RowCentro centro={centroMap} key={centroMap.id}/>
+                            <RowCentroC centro={centroMap} key={centroMap.id}/>
                         ))
                     }
                 </tbody>
@@ -43,4 +42,4 @@ const TableCentro = () => {
      );
 }
  
-export default TableCentro;
+export default TableCentroC;

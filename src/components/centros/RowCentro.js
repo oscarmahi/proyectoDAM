@@ -34,14 +34,14 @@ const RowCentro = ({centro}) => {
                     </span>
                 </button>
             </td>
-            <td>{centro.nombre}</td>
-            <td>{centro.direccion}</td>
-            <td>{centro.poblacion}</td>
-            <td>{centro.provincia}</td>
-            <td>{centro.cp}</td>
-            <td>{centro.telefono}</td>
-            <td>{centro.web}</td>
-            <td>{centro.email}</td>
+            <td className="is-size-7">{centro.nombre}</td>
+            <td className="is-size-7">{centro.direccion}</td>
+            <td className="is-size-7">{centro.poblacion}</td>
+            <td className="is-size-7">{centro.provincia}</td>
+            <td className="is-size-7">{centro.cp}</td>
+            <td className="is-size-7">{centro.telefono}</td>
+            <td className="is-size-7">{centro.web}</td>
+            <td className="is-size-7">{centro.email}</td>
         </tr>        
     );
 }
